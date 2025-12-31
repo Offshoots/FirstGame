@@ -1,0 +1,30 @@
+[gd_scene load_steps=4 format=3 uid="uid://c5g3wywvt4qw7"]
+
+[ext_resource type="Texture2D" uid="uid://kjkeiiis102m" path="res://icon.svg" id="1_imgkl"]
+[ext_resource type="PackedScene" uid="uid://b7djyaswqlqe6" path="res://scenes/godot_player.tscn" id="2_7pb34"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_imgkl"]
+
+[node name="First Level" type="Node2D"]
+
+[node name="Icon2" type="Sprite2D" parent="."]
+position = Vector2(45.000008, 287)
+scale = Vector2(0.255, 0.255)
+texture = ExtResource("1_imgkl")
+
+[node name="Icon3" type="Sprite2D" parent="."]
+position = Vector2(515, 298)
+scale = Vector2(0.255, 0.255)
+texture = ExtResource("1_imgkl")
+
+[node name="Icon4" type="Sprite2D" parent="."]
+position = Vector2(273, 302)
+scale = Vector2(0.255, 0.255)
+texture = ExtResource("1_imgkl")
+
+[node name="GodotPlayer" parent="." instance=ExtResource("2_7pb34")]
+position = Vector2(128, 95)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(154, 369)
+shape = SubResource("WorldBoundaryShape2D_imgkl")
